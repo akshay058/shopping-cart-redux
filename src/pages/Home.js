@@ -6,9 +6,8 @@ export default function Home() {
     <div>
       <h2 className="heading"> Welcome to Redux toolkit store</h2>
       <section>
-        <h3>
-          <Products />
-        </h3>
+        <h3>Product</h3>
+        <Products />
       </section>
     </div>
   );
