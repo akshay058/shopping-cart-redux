@@ -1,9 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+// custom enum fix ...
 export const STATUSES = Object.freeze({
   IDLE: "idle",
   ERROR: "error",
   LOADING: "loading",
 });
+
+// creating slice....
 const productSlice = createSlice({
   name: "product",
   initialState: {
@@ -19,6 +23,7 @@ const productSlice = createSlice({
     // },
   },
 
+  // use for asyn thunk
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state, action) => {
@@ -33,7 +38,7 @@ const productSlice = createSlice({
       });
   },
 });
-export const { setProducts, setStatus } = productSlice.actions;
+// export const { setProducts, setStatus } = productSlice.actions;
 export default productSlice.reducer;
 
 // asyn thunk
